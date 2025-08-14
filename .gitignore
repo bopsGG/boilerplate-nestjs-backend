@@ -48,7 +48,6 @@ yarn-error.log*
 /environment/service/*
 !/environment/service/.env.local
 !/environment/service/.env.test
-!/environment/service/.env.dev
 /deploy*
 /pipelines*
 
