@@ -17,7 +17,7 @@ import { CreateTodoDto } from '../dto';
 import { TodoDetail } from '../entities/todo-detail.entity';
 import { Todo } from '../entities/todo.entity';
 
-describe('TodoController (e2e)', () => {
+describe('TodoController', () => {
   let app: INestApplication;
   let httpServer: any;
   let todoRepo: Repository<Todo>;
