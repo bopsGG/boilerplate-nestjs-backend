@@ -1,0 +1,16 @@
+# After installation, you may need to link the PostgreSQL binaries
+brew link --force --overwrite postgresql@16                 # Force link PostgreSQL 16
+
+brew install postgresql@17                                  # Install PostgreSQL 16 using Homebrew
+
+# If you are using zsh (default shell on macOS Catalina and later), you can use the following commands:
+nano ~/.zshrc                                               # Add the following line to your .zshrc file
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"     # Add PostgreSQL to PATH
+source ~/.zshrc                                             # Reload the shell configuration
+pg_dump --version                                           # Verify the installation
+
+# If you are using bash instead of zsh, you can use the following commands:
+nano ~/.bash_profile                                        # Add the following line to your .bash_profile file
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"     # Add PostgreSQL to PATH
+source ~/.bash_profile                                      # Reload the shell configuration
+pg_dump --version                                           # Verify the installation

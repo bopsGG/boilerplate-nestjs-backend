@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:latest
+    container_name: EHDC_REDIS_CACHE_SERVICE
+    restart: always
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis_data:/data
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+
+volumes:
+  redis_data:
+    driver: local
+
+  #? If you are using Docker on Linux or WSL (Windows Subsystem for Linux), the volume will be stored at: `/var/lib/docker/volumes/redis_data/_data/`
+  #? To see what files Redis stores: `ls -lah /var/lib/docker/volumes/redis_data/_data/`
