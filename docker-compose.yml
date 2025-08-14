@@ -3,12 +3,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: BOILERPLATE_NESTJS_BACKEND_SERVICE
+    container_name: BOILERPLATE_NESTJS_BACKEND
     ports:
       - '3000:3000'
     volumes:
       - ./:/usr/src/app
       - /usr/src/app/node_modules
-    command: yarn run start:prod
+    command: yarn run start:dev
+    # command: yarn run start:prod
     environment:
-      - NODE_ENV=prod
+      - NODE_ENV=dev
+      # - NODE_ENV=prod
