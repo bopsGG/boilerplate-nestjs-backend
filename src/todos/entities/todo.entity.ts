@@ -111,10 +111,10 @@ export class Todo {
 
   @ApiPropertyOptional({
     description: 'Timestamp when the todo item was created',
-    example: new DefaultUpdateDateTransformer(),
+    example: new Date(),
     type: 'date',
     format: 'timestamp',
-    default: new DefaultUpdateDateTransformer(),
+    default: new Date(),
   })
   @CreateDateColumn({
     name: 'created_at',
@@ -125,10 +125,10 @@ export class Todo {
 
   @ApiPropertyOptional({
     description: 'Timestamp when the todo item was last updated',
-    example: new DefaultUpdateDateTransformer(),
+    example: new Date(),
     type: 'date',
     format: 'timestamp',
-    default: new DefaultUpdateDateTransformer(),
+    default: new Date(),
   })
   @UpdateDateColumn({
     name: 'updated_at',
