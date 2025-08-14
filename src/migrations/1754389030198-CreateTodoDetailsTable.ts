@@ -1,7 +1,7 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 import { OnDeleteForeignKeyOptionEnum } from '../common/enum';
 
-export class CreateTodosInfoTable1754389030198 implements MigrationInterface {
+export class CreateTodoDetailsTable1754389030198 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
