@@ -10,7 +10,5 @@ services:
       - ./:/usr/src/app
       - /usr/src/app/node_modules
     command: yarn run start:dev
-    # command: yarn run start:prod
     environment:
       - NODE_ENV=dev
-      # - NODE_ENV=prod
