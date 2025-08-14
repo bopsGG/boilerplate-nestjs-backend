@@ -24,11 +24,11 @@ describe('TodoController', () => {
   let todoDetailRepo: Repository<TodoDetail>;
 
   beforeAll(async () => {
-    const moduleFixture: TestingModule = await Test.createTestingModule({
+    const module: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
 
-    app = moduleFixture.createNestApplication();
+    app = module.createNestApplication();
 
     app.useGlobalFilters(
       new UnknownExceptionFilter(createMock<AppLoggerService>(), true),
