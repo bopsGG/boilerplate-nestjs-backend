@@ -229,7 +229,7 @@ describe('TodoService', () => {
       expect(result).toEqual(updatedTodo);
       expect(todoRepositoryMock.update).toBeCalledWith(
         todoId,
-        input,
+        { ...input, updatedAt: expect.any(Date) },
         expect.anything(),
       );
     });

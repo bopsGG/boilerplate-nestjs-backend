@@ -81,11 +81,11 @@ export class TodoService {
     await this.getById(id);
 
     try {
-      return await this.dataSource.transaction(async (manager) => {
+      await this.dataSource.transaction(async (manager) => {
         await this.todoRepo.update(id, <Todo>{ ...dto }, manager);
-
-        return this.todoRepo.getById(id);
       });
+
+      return this.todoRepo.getById(id);
     } catch (err) {
       throw new InternalErrorException({ message: err.message });
     }
